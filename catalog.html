@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog page</title>
-    <link rel="stylesheet" href="catalog.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -32,14 +32,19 @@
                 </svg></a>
         </div>
     </header>
-    <div class="breadcrumbs center">
+    <section class="breadcrumbs center">
         <div class="breadcrumbs_inner">
             <h2>New Arrivals</h2>
-            <span><a class="breadcrumbs_link" href="index.html">Home /</a>
-                <a class="breadcrumbs_link" href="#">Men/</a>
-                <a class="breadcrumbs_link breadcr_color" href="#">New arrivals</a></span>
+            <nav>
+                <ul class="breadcrumbs_list">
+                    <li class="breadcrumbs_items"><a class="breadcrumbs_link" href="index.html">Home</a></li>
+                    <li class="breadcrumbs_items"><a class="breadcrumbs_link" href="#">Men</a></li>
+                    <li class="breadcrumbs_items"><a class="breadcrumbs_link active_breadcrumb" href="#">New
+                            arrivals</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </section>
     <section class="center">
         <div class="filters">
             <div class="filter_left_block">

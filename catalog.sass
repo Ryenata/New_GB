@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300400700900&display=swap')
+@import vars
+
+.breadcrumbs
+    background-color: #f8f3f4
+    &_list
+        display: flex
+    &_items
+        list-style-type: none
+
+        &:not(:last-of-type)::after
+            content: '/'
+            padding-left: 5px
+            padding-right: 5px
+    &_inner
+        padding: 65px 0
+        display: flex
+        justify-content: space-between
+        margin-bottom: 55px
+
+    &_inner h2
+        color: $colorSecondary
+        font-size: 24px
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 0.7px
+        margin: 0
+
+    &_link
+        color: #636363
+        font-size: 14px
+        text-decoration: none
+        font-weight: 400
+        text-transform: uppercase
+
+    &_link:hover
+        color: $colorSecondary
+
+.active_breadcrumb
+    color: $colorSecondary
+    font-weight: 600
+
+.filters
+    display: flex
+    justify-content: flex-start
+
+.filter_left_block
+    width: 34%
+
+.main_filter_menu
+    position: relative
+
+    & summary
+        font-family: 'Lato'
+        font-size: 14px
+        text-transform: uppercase
+        font-weight: 600
+        color: #222
+        list-style-type: none
+        padding-left: 20px
+        cursor: pointer
+
+    & summary:hover
+        color: $colorSecondary
+
+    & summary:hover path
+        fill: $colorSecondary
+
+    &[open] > summary
+        color: $colorSecondary
+
+.main_filter_menu[open] > summary path
+    fill: $colorSecondary
+
+.main_filter_menu svg
+    margin-left: 10px
+
+.dropdown_link
+    display: block
+    font-weight: 400
+    text-decoration: none
+    color: #646464
+    font-family: 'Lato'
+    font-size: 14px
+    line-height: 28px
+    margin-left: 34px
+
+.dropdown_link:hover
+    color: $colorSecondary
+
+.filter_dropdown_box
+    background: white
+    position: absolute
+    z-index: 100000
+    width: 360px
+    box-shadow: 2px 8px 12px #22222240
+    margin-top: 16px
+    padding-right: 15px
+    padding-left: 15px
+    box-sizing: border-box
+
+.filter_menu
+    margin-bottom: 18px
+    padding-top: 10px
+
+    & summary
+        list-style-type: none
+        font-family: 'Lato'
+        font-size: 14px
+        text-transform: uppercase
+        color: $colorSecondary
+        font-weight: 600
+        letter-spacing: 0.7px
+        border-bottom: 1px solid #ebebeb
+        padding: 10px 0 10px 15px
+        border-left: 5px solid transparent
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+.dropdown_list
+    margin-top: 24px
+
+.filter_menu summary:hover
+    border-left: 5px solid $colorSecondary
+
+.filter_right_block
+    display: flex
+    justify-content: space-between
+
+.filter_right
+    margin-right: 28px
+    position: relative
+
+    & summary
+        list-style-type: none
+        font-family: 'Lato'
+        font-weight: 500
+        letter-spacing: 0.7px
+        font-size: 14px
+        text-transform: uppercase
+        color: #6F6E6E
+        cursor: pointer
+
+    & svg
+        margin-left: 10px
+
+    &_dropdown_list
+        background: white
+        position: absolute
+        box-shadow: 2px 8px 12px #22222240
+        margin-top: 4px
+        padding: 0 28px 12px 10px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        z-index: 100
+
+    & summary:hover path
+        fill: $colorSecondary
+
+.checkbox_box label
+    font-weight: 400
+    color: #646464
+    font-family: 'Lato'
+    font-size: 14px
+
+.checkbox_box
+    display: flex
+    align-items: center
+    margin-top: 10px
+
+.filter_right_checkbox
+    margin-right: 8px
+
+.checkbox_box:hover label
+    color: $colorSecondary
+
+.products_box
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 48px
+
+.product_card
+    display: flex
+    position: relative
+    width: 360px
+    margin-bottom: 30px
+
+    &_link
+        text-decoration: none
+        text-transform: uppercase
+        font-weight: 600
+        font-size: 13px
+        color: $colorPrimary
+        font-family: 'Lato', sans-serif
+        display: flex
+        flex-direction: column
+
+    &_description p
+        font-family: Lato
+        font-weight: 300
+        font-size: 14px
+        line-height: 17px
+        color: #5D5D5D
+        text-transform: none
+        margin-top: 12px
+        margin-bottom: 18px
+
+    &_button
+        position: absolute
+        width: 100%
+        top: 175px
+        justify-content: center
+        display: none
+
+.card_button
+    border: 1px solid #fff
+    padding: 10px 10px 10px 8px
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &_text
+        color: #fff
+        font-family: 'Lato',sans-serif
+        font-size: 13px
+        font-weight: 700
+        margin-left: 8px
+
+    &:hover
+        border: 1px solid $colorSecondary
+
+    &:hover .card_button_text
+        color: $colorSecondary
+
+    &:hover path
+        fill: $colorSecondary
+
+.product_card_description
+    padding: 25px 28px 20px 15px
+    background-color: #F8F8F8
+
+    & h3
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+
+.product_card:hover
+    box-shadow: 2px 8px 5px #dadada
+
+.product_card:hover  .product_card_img
+    filter: brightness(50%)
+
+.product_card:hover .product_card_button
+    display: flex
+
+.product_card_price
+    padding-top: 17px
+    color: $colorSecondary
+    font-size: 16px
+    font-weight: 700
+
+.pagination_box
+    margin: 18px auto 0 auto
+
+.pagination
+    border: 1px solid #e5e5e5
+    padding: 12px 15px
+
+    &_page
+        text-decoration: none
+        font-family: 'Lato'
+        font-size: 16px
+        color: #e5e5e5
+        margin-right: 12px
+        font-weight: 400
+
+    &_page:hover
+        color: $colorSecondary
+
+    &_page:hover path
+        fill: $colorSecondary
+
+.last_pp_m
+    margin-right: 0px

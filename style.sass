@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300400700900&display=swap')
+@import vars
+@import catalog
+@import product_page
+
+*
+    margin: 0px
+    padding: 0px
+
+body
+    font-family: 'Lato', sans-serif
+
+a
+    text-decoration: none
+
+img
+    max-width: 100%
+
+header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $colorPrimary
+    padding: 18px 0
+
+.center
+    padding-left: calc(50% - #{$widthSite / 2 })
+    padding-right: calc(50% - #{$widthSite / 2 })
+
+.header_left
+    display: flex
+    align-items: center
+    gap: 40px
+
+.header_right
+    display: flex
+    align-items: center
+    gap: 32px
+
+.top
+    padding-left: calc(50% - 800px)
+    padding-right: calc(50% - 800px)
+    background-color: #F1E4E6
+    display: flex
+
+.top_right
+    padding-left: 64px
+    width: 50%
+    box-sizing: border-box
+
+.top_left
+    width: 50%
+
+.top_left img
+    height: 100%
+
+.top_content
+    border-left: 12px solid $colorSecondary
+    margin-top: 40%
+    padding-left: 16px
+
+.top_content h1
+    text-transform: uppercase
+    font-size: 48px
+    font-weight: 900
+    letter-spacing: 1.5px
+    line-height: 0.8
+
+.lower_slider_text,.pink_slider_text
+    font-size: 32px
+    letter-spacing: 1px
+
+.pink_slider_text
+    color: $colorSecondary
+
+.sale_content
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    margin-bottom: 30px
+    margin-top: 64px
+
+.sale_item
+    position: relative
+    &:hover .sale_heading
+        color: $colorSecondary - #222
+.sale_image
+    width: ($widthSite - 2*$gapGrid) /3
+    &_big
+        width: $widthSite - 2*$gapGrid
+.sale_text
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+.sale_p
+    color: #FFF
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+
+.sale_heading
+    color: $colorSecondary
+    font-size: 24px
+    line-height: 29px
+    font-weight: bold
+
+.featured_items
+    margin-top: 100px
+
+.featured_items h2
+    font-size: 30px
+    font-weight: 700
+    text-align: center
+
+.featured_items_text_line
+    color: #9f9f9f
+    font-weight: 600
+    text-align: center
+    margin-top: 16px
+
+.featured_items_items_cards
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 48px
+
+.featured_items_card
+    display: flex
+    position: relative
+    width: $widthSite / 3 - 2 * $gapGrid
+    margin-bottom: 30px
+
+.featured_items_card_link
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: 600
+    font-size: 13px
+    color: $colorPrimary
+    font-family: 'Lato', sans-serif
+    display: flex
+    flex-direction: column
+
+.featured_items_card_description p
+    font-family: Lato
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    color: #5D5D5D
+    text-transform: none
+    margin-top: 12px
+    margin-bottom: 18px
+
+.featured_items_card_button
+    position: absolute
+    width: 100%
+    top: 175px
+    justify-content: center
+    display: none
+
+.card_button
+    border: 1px solid #fff
+    padding: 10px 10px 10px 8px
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+
+.card_button_text
+    color: #fff
+    font-family: 'Lato',sans-serif
+    font-size: 13px
+    font-weight: 700
+    margin-left: 8px
+
+.card_button:hover
+    border: 1px solid $colorSecondary
+
+.card_button:hover .card_button_text
+    color: $colorSecondary
+
+.featured_items_card_button:hover path
+    fill: $colorSecondary
+
+.featured_items_card_description
+    padding: 25px 28px 20px 15px
+    background-color: #F8F8F8
+
+.featured_items_card_description h3
+    font-weight: 400
+    font-size: 14px
+    line-height: 16px
+
+.featured_items_card:hover
+    box-shadow: 2px 8px 5px #dadada
+
+.featured_items_card:hover  .featured_items_card_img
+    filter: brightness(50%)
+
+.featured_items_card:hover .featured_items_card_button
+    display: flex
+
+.featured_items_card_price
+    padding-top: 17px
+    color: $colorSecondary
+    font-size: 16px
+    font-weight: 700
+
+.featured_items_button_box
+    text-align: center
+
+.featured_items_all_button
+    padding: 13px 31px
+    font-weight: 600
+    margin-top: 18px
+    cursor: pointer
+
+.featured_items_all_button
+    background-color: $colorSecondary
+    color: #ffffff
+    font-family: 'Lato',sans-serif
+    border: 2px solid transparent
+    font-size: 15px
+    cursor: pointer
+    text-transform: capitalize
+    letter-spacing: 0.4px
+
+.featured_items_all_button:hover
+    background-color: #fff
+    border: 2px solid $colorSecondary
+    color: $colorSecondary
+
+.offer_banner_box
+    background-color: $colorPrimary
+    margin-top: 96px
+
+.offer_banner_inner_box
+    display: flex
+    justify-content: space-between
+    padding: 90px 0 115px 0
+    align-items: center
+
+.offer_banner
+    text-align: center
+
+.offer_banner h3
+    font-size: 20px
+    font-family: 'Lato'
+    color: #fff
+    margin: 25px 0 17px 0
+
+.offer_banner p
+    color: #fff
+    font-size: 14px
+
+.second_banner h3
+    margin: 20px 0 17px 0
+
+.third_banner h3
+    margin: 20px 0 17px 0
+
+.top_footer_content
+    display: flex
+    justify-content: space-between
+    padding: 0
+
+.top_footer
+    background-image: url(img/footer.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center bottom
+
+.top_footer_opinion
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 100px
+    width: 50%
+
+.top_footer_opinion_img
+    width: 96px
+
+.top_footer_opinion_text
+    font-size: 16px
+    font-style: italic
+    letter-spacing: 0.4px
+    color: #222224
+    margin-top: 30px
+    width: 40%
+    text-align: center
+
+.top_footer_opinion_text p
+    margin-bottom: 20px
+    line-height: 1.63
+
+.top_footer_opinion_text_name
+    color: $colorSecondary
+    font-style: normal
+    font-weight: 700
+    margin-top: 20px
+
+.top_footer_opinion_text_info
+    color: #222224
+    font-size: 12px
+    font-style: normal
+    line-height: 1.63
+
+.top_footer_newsletter
+    text-align: center
+    margin-top: 148px
+    margin-bottom: 130px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 50%
+
+.top_footer_newsletter form
+    display: flex
+    justify-content: center
+    align-items: baseline
+
+.top_footer_newsletter h2
+    font-size: 24px
+    text-transform: uppercase
+    font-weight: 400
+    margin: 0
+
+.top_footer_newsletter p
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 400
+    line-height: 1.71
+    margin: 0
+
+.newsletter_input
+    margin-top: 35px
+    border-radius: 23px 0 0 23px
+    border: none
+    padding: 15px 15px 15px 28px
+    font-family: Lato
+    font-size: 14px
+    background-color: #e1e1e1
+
+.newsletter_input:focus,.search_input:focus
+    outline: none
+
+.newsletter_submit
+    background-color: $colorSecondary
+    color: #fff
+    font-family: 'Lato'
+    font-size: 14px
+    padding: 13px 20px
+    border-radius: 0 23px 23px 0
+    border: 2px solid transparent
+    cursor: pointer
+    letter-spacing: 0.35px
+
+.newsletter_submit:hover
+    background-color: #fff
+    border: 2px solid $colorSecondary
+    color: $colorSecondary
+
+.bottom_footer
+    background-color: #222
+    padding-top: 24px
+    padding-bottom: 24px
+
+.bottom_footer_content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0
+
+.bottom_footer_right
+    display: flex
+    justify-content: space-between
+
+.bottom_footer_right_social_link
+    vertical-align: sub
+    color: $colorPrimary
+
+.social_link_box
+    background-color: #fff
+    width: 32px
+    height: 32px
+    margin-left: 8px
+    text-align: center
+
+.social_link_box .fa
+    vertical-align: sub
+
+.social_link_box:hover
+    background-color: $colorSecondary
+    color: #fff
+
+.bottom_footer_left_text
+    font-size: 16px
+    text-transform: capitalize
+    color: #fff
+    font-weight: 300
+    letter-spacing: 0.4px
