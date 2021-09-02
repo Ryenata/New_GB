@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300400700900&display=swap");
+.for_text, .breadcrumbs_link, .filter_menu summary, .filter_right summary {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 .breadcrumbs {
   background-color: #f8f3f4;
 }
@@ -41,10 +47,7 @@
 
 .breadcrumbs_link {
   color: #636363;
-  font-size: 14px;
   text-decoration: none;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 .breadcrumbs_link:hover {
@@ -60,17 +63,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  gap: 30px;
 }
 
 .filter_left_block {
-  width: 34%;
+  width: 360px;
+  position: relative;
 }
 
 .main_filter_menu {
-  position: relative;
+  padding: 12px 16px 0 16px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
 }
 
 .main_filter_menu summary {
@@ -80,7 +88,6 @@
   font-weight: 600;
   color: #222;
   list-style-type: none;
-  padding-left: 20px;
   cursor: pointer;
 }
 
@@ -96,12 +103,25 @@
   color: #f16d7f;
 }
 
+.main_filter_menu[open] {
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
 .main_filter_menu[open] > summary path {
   fill: #f16d7f;
 }
 
 .main_filter_menu svg {
   margin-left: 10px;
+}
+
+.main_filter_dropdown_box {
+  padding-top: 16px;
+}
+
+.dropdown_link_box {
+  padding-top: 24px;
 }
 
 .dropdown_link {
@@ -135,20 +155,16 @@
 
 .filter_menu {
   margin-bottom: 18px;
-  padding-top: 10px;
 }
 
 .filter_menu summary {
   list-style-type: none;
   font-family: 'Lato';
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #f16d7f;
-  font-weight: 600;
+  color: #6F6E6E;
   letter-spacing: 0.7px;
   border-bottom: 1px solid #ebebeb;
   padding: 10px 0 10px 15px;
-  border-left: 5px solid transparent;
+  border-left: 5px solid #f16d7f;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,12 +177,12 @@
           justify-content: space-between;
 }
 
-.dropdown_list {
-  margin-top: 24px;
+.filter_menu[open] summary {
+  color: #f16d7f;
 }
 
-.filter_menu summary:hover {
-  border-left: 5px solid #f16d7f;
+.dropdown_list {
+  margin-top: 24px;
 }
 
 .filter_right_block {
@@ -176,6 +192,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 12px;
 }
 
 .filter_right {
@@ -185,11 +202,7 @@
 
 .filter_right summary {
   list-style-type: none;
-  font-family: 'Lato';
-  font-weight: 500;
   letter-spacing: 0.7px;
-  font-size: 14px;
-  text-transform: uppercase;
   color: #6F6E6E;
   cursor: pointer;
 }

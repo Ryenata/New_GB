@@ -3,6 +3,10 @@
 @import catalog
 @import product_page
 
+.for_text
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 14px
 *
     margin: 0px
     padding: 0px
@@ -36,6 +40,44 @@ header
     display: flex
     align-items: center
     gap: 32px
+    position: relative
+
+.burger_menu_box:hover .burger_menu
+    display: flex
+    flex-direction: column
+
+.burger_menu
+    background-color: #fff
+    display: none
+    position: absolute
+    top: 55px
+    left: 158px
+    padding: 16px 16px 16px 32px
+    width: 140px
+
+    & h2
+        @extend .for_text
+
+    &_close_icon svg
+        float: right
+
+    &_item_box
+        margin-top: 20px
+
+    &_item
+        margin-top: 8px
+
+    &_list
+        list-style-type: none
+        margin-left: 20px
+
+    &_heading
+        @extend .for_text
+        color: $colorSecondary
+
+    &_item_link
+        color: #6F6E6E
+        font-size: 14px
 
 .top
     padding-left: calc(50% - 800px)
@@ -185,7 +227,7 @@ header
 .card_button:hover .card_button_text
     color: $colorSecondary
 
-.featured_items_card_button:hover path
+.card_button:hover path
     fill: $colorSecondary
 
 .featured_items_card_description
@@ -214,6 +256,7 @@ header
 
 .featured_items_button_box
     text-align: center
+    margin-top: 48px
 
 .featured_items_all_button
     padding: 13px 31px
@@ -271,7 +314,7 @@ header
     padding: 0
 
 .top_footer
-    background-image: url(img/footer.png)
+    background-image: url(../img/footer.png)
     background-size: cover
     background-repeat: no-repeat
     background-position: center bottom
@@ -280,7 +323,7 @@ header
     display: flex
     flex-direction: column
     align-items: center
-    padding-top: 100px
+    padding-top: 86px
     width: 50%
 
 .top_footer_opinion_img
@@ -328,18 +371,18 @@ header
 .top_footer_newsletter h2
     font-size: 24px
     text-transform: uppercase
-    font-weight: 400
-    margin: 0
+    font-weight: 600
+    margin-bottom: 6px
 
 .top_footer_newsletter p
-    font-size: 14px
+    font-size: 18px
     text-transform: uppercase
     font-weight: 400
     line-height: 1.71
     margin: 0
 
 .newsletter_input
-    margin-top: 35px
+    margin-top: 30px
     border-radius: 23px 0 0 23px
     border: none
     padding: 15px 15px 15px 28px
@@ -362,9 +405,7 @@ header
     letter-spacing: 0.35px
 
 .newsletter_submit:hover
-    background-color: #fff
-    border: 2px solid $colorSecondary
-    color: $colorSecondary
+    background-color: $colorSecondary - #222
 
 .bottom_footer
     background-color: #222

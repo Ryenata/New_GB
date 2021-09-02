@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300400700900&display=swap')
+@import vars
+
+.for_text
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 14px
+
+.brdcr_inner_pp
+    margin-bottom: 0
+
+.main_content
+    position: relative
+
+.carousel_inner
+    height: 770px
+
+.carousel_item
+    margin: 0 auto
+    background-color: #f7f7f7
+    padding-top: 10px
+    height: 770px
+    border: 1px solid #eaeaea
+    display: flex
+    justify-content: center
+
+.carousel_item img
+    height: 95%
+
+.carousel_controls_box
+    display: flex
+    justify-content: space-between
+    position: absolute
+    top: 360px
+    width: 100%
+
+.carousel_icon path
+    fill: $colorPrimary
+
+.carousel_control:hover .carousel_icon path
+    fill: $colorSecondary
+
+.carousel_control
+    border: none
+    background-color: rgba(42, 42, 42, 0.15)
+    padding: 12px 16px
+    cursor: pointer
+
+.product-wrapper
+    position: relative
+    min-height: 500px
+
+.product_description
+    position: absolute
+    top: -10%
+    border: 1px solid #eaeaea
+    padding-top: 70px
+    display: flex
+    width: 1140px
+    background-color: #fff
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+
+.description_collection_box
+    border-bottom: 1px solid #eaeaea
+    padding-bottom: 10px
+    position: relative
+
+.description_collection_line
+    background-color: $colorSecondary
+    height: 3px
+    position: absolute
+    width: 60px
+    bottom: -3px
+    left: 44px
+
+.product_description h4
+    font-family: 'Lato'
+    color: $colorSecondary
+    @extend .for_text
+
+.product_description h2
+    font-size: 18px
+    text-transform: uppercase
+    margin-top: 18px
+    font-weight: 400
+
+.description_text
+    width: 55%
+    font-size: 14px
+    margin-top: 50px
+    color: #5e5e5e
+    text-align: center
+    line-height: 24px
+
+.product_properties_price
+    color: $colorSecondary
+    font-size: 24px
+    text-align: center
+    margin-top: 32px
+    margin-bottom: 60px
+    font-weight: 400
+
+.product_properties
+    span
+        color: #b9b9b9
+
+hr
+    width: 40%
+    background-color: #eaeaea
+    height: 1px
+    border: none
+    margin: 0
+
+.pp_filter_block
+    display: flex
+    justify-content: space-between
+    margin-top: 65px
+
+.pp_filter
+    position: relative
+    margin-right: 10px
+
+.pp_filter_dropdown_list
+    position: absolute
+    background: white
+    box-shadow: 2px 8px 12px #22222240
+    margin-top: 4px
+    padding: 6px 12px 12px 10px
+
+.pp_filter_summary
+    @extend .for_text
+    list-style-type: none
+    padding-right: 10px
+    cursor: pointer
+    & svg
+        margin-left: 9px
+
+.pp_filter_checkbox
+    margin-top: 10px
+
+.pp_checkbox_box label
+    font-weight: 400
+    color: #646464
+    font-family: 'Lato'
+    font-size: 14px
+
+.pp_checkbox_box:hover label
+    color: $colorSecondary
+
+.pp_add_button_box
+    margin: 48px 0 64px 0
+
+.pp_add_button
+    border: 1px solid $colorSecondary
+    padding: 10px 20px
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #fff
+
+.pp_add_button path
+    fill: $colorSecondary
+
+.pp_add_button_text
+    color: $colorSecondary
+    font-family: 'Lato',sans-serif
+    font-size: 16px
+    font-weight: 400
+    margin-left: 12px
+
+.pp_add_button:hover
+    background-color: $colorSecondary
+
+.pp_add_button:hover .pp_add_button_text
+    color: #fff
+
+.pp_add_button:hover  svg path
+    fill: #fff
+
+.additional_items
+    display: flex
+    justify-content: space-between
+    margin-top: 194px
+    margin-bottom: 98px
+
+.carousel_control
+    border: none
+    background-color: rgba(42, 42, 42, 0.15)
