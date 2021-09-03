@@ -1120,7 +1120,9 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .top_footer {
@@ -1128,6 +1130,15 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+}
+
+.top_footer_opinion_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .top_footer_opinion {
@@ -1141,7 +1152,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 86px;
   width: 50%;
 }
 
@@ -1155,7 +1165,6 @@ header {
   letter-spacing: 0.4px;
   color: #222224;
   margin-top: 30px;
-  width: 40%;
   text-align: center;
 }
 
