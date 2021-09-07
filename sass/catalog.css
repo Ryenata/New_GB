@@ -89,6 +89,8 @@
   color: #222;
   list-style-type: none;
   cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .main_filter_menu summary:hover {
@@ -114,6 +116,11 @@
 
 .main_filter_menu svg {
   margin-left: 10px;
+}
+
+.main_filter_menu svg path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main_filter_dropdown_box {
@@ -175,6 +182,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .filter_menu[open] summary {
@@ -279,6 +288,10 @@
   position: relative;
   width: 360px;
   margin-bottom: 30px;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 .product_card_link {
@@ -369,6 +382,13 @@
           box-shadow: 2px 8px 5px #dadada;
 }
 
+.product_card_img {
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
 .product_card:hover .product_card_img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
@@ -403,6 +423,8 @@
   color: #e5e5e5;
   margin-right: 12px;
   font-weight: 400;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .pagination_page:hover {
