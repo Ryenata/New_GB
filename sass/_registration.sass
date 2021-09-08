@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300400700900&display=swap')
+
+input:focus
+    outline: none
+.for_text
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 14px
+.reg-content
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.inputs-box
+    display: flex
+    flex-direction: column
+    &__input
+        margin-top: 20px
+        border: 1px solid #cfc3c3
+        padding: 13px 0 13px 16px
+        font-size: 13px
+        font-family: 'Lato'
+    &__h3
+        font-size: 16px
+        font-weight: 300
+    &__radio
+        display: flex
+        margin: 30px 0
+        &__label
+            font-size: 11px
+            margin-right: 20px
+            font-weight: 300
+
+        &__input
+            margin-right: 10px
+    &__instruction
+        font-size: 13px
+        color: #B1B1B1
+        margin-top: 15px
+
+.reg-button-box
+    margin-top: 40px
+    margin-bottom: 96px
+
+.reg-button
+    padding: 16px 24px 16px 30px
+    @extend .for_text
+    color: #fff
+    background-color: $colorSecondary
+    border: 1px solid transparent
+    display: inline-block
+    transition-property: background-color, color
+    transition-duration: 0.5s
+
+.reg-button svg
+    margin-left: 20px
+
+.reg-button path
+    fill: #fff
+    transition-duration: 0.5s
+.reg-button:hover
+    background-color: #fff
+    color: $colorSecondary
+    border: 1px solid $colorSecondary
+
+.reg-button:hover svg path
+    fill: $colorSecondary
+
+.reg-content_right
+    width: 50%
+
+.reg-content_right__h2,.reg-content_right__text
+    font-size: 24px
+    margin-bottom: 22px
+    font-family: 'Lato'
+    font-weight: 300
+
+.reg-content_right__item
+    font-size: 24px
+    font-family: 'Lato'
+    font-weight: 300
+    margin-bottom: 16px
+
+    & span
+        padding-left: 23px
+
+.reg-content_right__list
+    list-style-position: inside
+    list-style-image: url(../img/checked.svg)
