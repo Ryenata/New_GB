@@ -21,6 +21,9 @@ a
 
 img
     max-width: 100%
+.box
+    position: relative
+    overflow: hidden
 
 header
     display: flex
@@ -35,34 +38,46 @@ header
 
 .header_left
     display: flex
-    align-items: centers
+    align-items: center
     gap: 40px
 
 .header_right
     display: flex
     align-items: center
     gap: 32px
-    position: relative
 
-.burger_menu_box:hover .burger_menu
-    display: flex
-    flex-direction: column
+#switcher:checked ~ .burger_menu
+    right: -110%
+
+#switcher
+    display: none
+
+.burger_menu_icon:hover
+    cursor: pointer
 
 .burger_menu
     background-color: #fff
-    display: none
+    display: flex
     position: absolute
-    top: 55px
-    left: 158px
+    flex-direction: column
+    top: 77px
+    right: 0
+    box-sizing: border-box
+    z-index: 100
     padding: 16px 16px 16px 32px
     width: 140px
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    transition: right 0.3s
+    width: 232px
 
     & h2
         @extend .for_text
+        font-weight: 600
 
     &_close_icon svg
         float: right
-
+    &_close_icon:hover
+        cursor: pointer
     &_item_box
         margin-top: 20px
 
@@ -80,6 +95,8 @@ header
     &_item_link
         color: #6F6E6E
         font-size: 14px
+    &_item_link:hover
+        color: $colorSecondary
 
 .top
     padding-left: calc(50% - 800px)
@@ -102,17 +119,17 @@ header
     border-left: 12px solid $colorSecondary
     margin-top: 40%
     padding-left: 16px
+    color: $colorPrimary
 
-.top_content h1
+.heading_slider_text
     text-transform: uppercase
     font-size: 48px
     font-weight: 900
-    letter-spacing: 1.5px
     line-height: 0.8
 
 .lower_slider_text,.pink_slider_text
     font-size: 32px
-    letter-spacing: 1px
+    font-weight: 600
 
 .pink_slider_text
     color: $colorSecondary
@@ -128,10 +145,10 @@ header
     position: relative
     &:hover .sale_heading
         color: $colorSecondary - #222
+
 .sale_image
-    width: ($widthSite - 2*$gapGrid) /3
-    &_big
-        width: $widthSite - 2*$gapGrid
+    width: ($widthSite - 2 * $gapGrid) /3
+
 .sale_text
     position: absolute
     width: 100%
@@ -153,7 +170,7 @@ header
     color: $colorSecondary
     font-size: 24px
     line-height: 29px
-    font-weight: bolds
+    font-weight: bold
 
 .featured_items
     margin-top: 100px
@@ -171,14 +188,15 @@ header
 
 .featured_items_items_cards
     display: flex
-    justify-content: space-between
+    justify-content: center
     flex-wrap: wrap
     margin-top: 48px
+    gap: 30px
 
 .featured_items_card
     display: flex
     position: relative
-    width: $widthSite / 3 - 2 * $gapGrid
+    width: ($widthSite - 2 * $gapGrid) / 3
     margin-bottom: 30px
     transition: box-shadow 0.5s
 
@@ -292,26 +310,24 @@ header
     justify-content: space-between
     padding: 90px 0 115px 0
     align-items: center
-    flex-wrap: wrap
 
 .offer_banner
     text-align: center
+    flex-grow: 1
+    width: $contentCol4
 
-.offer_banner h3
+.heading-mg
+    margin: 25px 0 17px 0
+
+.offer_banner_h3
     font-size: 20px
     font-family: 'Lato'
     color: #fff
-    margin: 25px 0 17px 0
+    margin: 20px 0 17px 0
 
 .offer_banner p
     color: #fff
     font-size: 14px
-
-.second_banner h3
-    margin: 20px 0 17px 0
-
-.third_banner h3
-    margin: 20px 0 17px 0
 
 .top_footer_content
     display: flex
@@ -456,3 +472,6 @@ header
     color: #fff
     font-weight: 300
     letter-spacing: 0.4px
+
+@import index1023
+@import index767
