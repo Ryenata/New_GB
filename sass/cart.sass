@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300400700900&display=swap')
+@import vars
+
+input:focus
+    outline: none
+.for_text
+    text-transform: uppercase
+    font-weight: 400
+    font-size: 14px
+
+.cart__content
+    display: flex
+    justify-content: space-between
+
+.cart__content-left
+    display: flex
+    flex-direction: column
+    width: 65%
+    margin-right: 128px
+    &__card
+        display: flex
+        justify-content: space-between
+        box-shadow: 2px 8px 15px #dadada
+        margin-bottom: 40px
+
+.card__link:hover
+    color: $colorSecondary
+
+.card__description
+    display: flex
+    flex-direction: column
+    margin-left: 30px
+    &__heading
+        font-size: 24px
+        font-weight: 400
+        margin-top: 22px
+        margin-bottom: 42px
+    &__text
+        font-size: 22px
+        line-height: 26px
+        margin-bottom: 6px
+    &_price
+        color: $colorSecondary
+
+.card__link
+    color: $colorPrimary
+    transition: color 0.5s
+
+.card__icon
+    margin: 28px 22px 0 0
+    transition-duration: 1s
+    transition-property: transform
+
+.card__icon:hover
+    transform: rotate(180deg)
+    cursor: pointer
+
+.cart__content-right
+    display: flex
+    flex-direction: column
+    width: 35%
+
+.quantity__input
+    width: 12%
+    margin-left: 24px
+    border: 1px solid #e1e1e1
+    text-indent: 13px
+
+.quantity__text
+    display: inline
+    @extend.card__description__text
+
+.cart__content-left__button
+    display: flex
+    justify-content: space-between
+    margin-bottom: 128px
+
+.cart__button
+    padding: 15px 38px
+    border: 1px solid #cfc3c3
+    color: $colorPrimary
+    @extend.for_text
+    transition-property: background-color, color
+    transition-duration: 0.5s
+
+.cart__button:hover, .cart__input__button:hover
+    background-color: $colorSecondary
+    color: #fff
+    border: 1px solid transparent
+
+.cart__input
+    display: flex
+    flex-direction: column
+
+    & h3
+        font-size: 16px
+        font-weight: 400
+        text-transform: uppercase
+
+    &__adress
+        margin-top: 20px
+        padding: 13px 16px
+        font-size: 13px
+        border: 1px solid #cfc3c3
+        font-family: 'Lato'
+    &__button-box
+        margin-top: 24px
+
+    &__button
+        display: block
+        border: 1px solid #cfc3c3
+        padding: 10px 14px
+        color: $colorPrimary
+        font-size: 11px
+        text-transform: uppercase
+        width: 71px
+        transition-property: background-color, color
+        transition-duration: 0.5s
+
+.cart__summary
+    background-color: #F5F3F3
+    margin-top: 60px
+    padding: 40px
+
+    &__text-box
+        text-align: right
+        margin-bottom: 20px
+
+    &__text
+        font-size: 11px
+        text-transform: uppercase
+
+    &__text-l
+        font-size: 16px
+        text-transform: uppercase
+        margin-top: 12px
+
+    &__price
+        margin-left: 15px
+
+    &__button
+        text-align: center
+        color: #fff
+        background-color: $colorSecondary
+        font-size: 16px
+        text-transform: uppercase
+        padding: 15px 35px
+        margin-top: 16px
+        border: 1px solid transparent
+        display: block
+        transition-property: background-color, color
+        transition-duration: 0.5s
+
+    &__button:hover
+        background-color: #eaeaea
+        color: $colorSecondary
+        border: 1px solid $colorSecondary
+
+.summary__hr
+    background-color: #eaeaea
+    height: 1px
+    border: none
+    margin: 0
+
+.l-price
+    color: $colorSecondary
