@@ -638,9 +638,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 194px;
   margin-bottom: 98px;
   -ms-flex-wrap: wrap;
@@ -761,10 +761,10 @@ input:focus {
 }
 
 .quantity__input {
-  width: 15%;
+  width: 12%;
   margin-left: 24px;
   border: 1px solid #e1e1e1;
-  text-indent: 15px;
+  text-indent: 13px;
 }
 
 .quantity__text {
@@ -1938,6 +1938,9 @@ header {
   .additional_items {
     margin-top: 142px;
     margin-bottom: 34px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

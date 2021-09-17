@@ -108,10 +108,10 @@ input:focus {
 }
 
 .quantity__input {
-  width: 15%;
+  width: 12%;
   margin-left: 24px;
   border: 1px solid #e1e1e1;
-  text-indent: 15px;
+  text-indent: 13px;
 }
 
 .quantity__text {
